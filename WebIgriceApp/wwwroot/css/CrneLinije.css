@@ -1,0 +1,12 @@
+﻿ul.navbar-nav.flex-grow-1 {
+    display: flex;
+}
+
+    ul.navbar-nav.flex-grow-1 li:not(:last-child) {
+        border-right: 1px solid black;
+        padding-right: 10px; 
+    }
+
+    ul.navbar-nav.flex-grow-1 li:last-child {
+        padding-right: 0; 
+    }

@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebIgriceApp.styles.css" asp-append-version="true" />
+
+    <style>
+      
+
+            ul.navbar-nav.flex-grow-1 li {
+                border-right: 1px solid black;
+                padding: 0 10px;
+            }
+
+                ul.navbar-nav.flex-grow-1 li:first-child {
+                    border-left: 1px solid black;
+                }
+
+                ul.navbar-nav.flex-grow-1 li:last-child {
+                border-right: 1px solid black;
+                }
+    </style>
+
+
 </head>
 <body style="background-color: lightgray;">
     <header>
@@ -26,14 +45,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">O nama </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Igrice" asp-action="Index">Popis Igrica</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Igrice" asp-action="SearchIndex">Popis Igrica</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Kategorija" asp-action="Index">Popis kategorija</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Igrice" asp-action="SearchIndex">Pretraži igrice</a>
-                        </li>
+                        
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

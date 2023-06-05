@@ -104,5 +104,7 @@ namespace WebIgriceApp.Controllers
             _repozitorijUpita.Delete(kategorija);
             return RedirectToAction("Index");
         }
+        
+
     }
 }

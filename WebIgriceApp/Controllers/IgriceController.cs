@@ -33,7 +33,7 @@ namespace WebIgriceApp.Controllers
             if (ModelState.IsValid)
             {
                 _repozitorijUpita.Create(igrice);
-                return RedirectToAction("Index"); 
+                return RedirectToAction("SearchIndex"); 
             }
             
             ViewData["KategorijaId"] = new SelectList(_repozitorijUpita.PopisKategorija(), "Id", "Naziv", igrice.KategorijaId);
@@ -71,7 +71,7 @@ namespace WebIgriceApp.Controllers
             if (ModelState.IsValid)
             {
                 _repozitorijUpita.Update(igrice);
-                return RedirectToAction("Index");
+                return RedirectToAction("SearchIndex");
             }
            
             ViewData["KategorijaId"] = new SelectList(_repozitorijUpita.PopisKategorija(), "Id", "Naziv", igrice.KategorijaId);
@@ -103,7 +103,7 @@ namespace WebIgriceApp.Controllers
         {
             var igrice = _repozitorijUpita.DohvatiIgricuSIdom(id);
             _repozitorijUpita.Delete(igrice);
-            return RedirectToAction("Index");
+            return RedirectToAction("SearchIndex");
 
         }
 
